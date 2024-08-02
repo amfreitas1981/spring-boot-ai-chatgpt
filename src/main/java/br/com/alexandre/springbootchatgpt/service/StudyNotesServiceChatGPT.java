@@ -1,5 +1,7 @@
-package br.com.alexandre.springbootchatgpt.model;
+package br.com.alexandre.springbootchatgpt.service;
 
+import br.com.alexandre.springbootchatgpt.model.ChatGPTRequest;
+import br.com.alexandre.springbootchatgpt.model.ChatGPTResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -11,7 +13,7 @@ public class StudyNotesServiceChatGPT implements StudyNotesService {
 
     public StudyNotesServiceChatGPT(WebClient.Builder builder, @Value("${openai.api.key}") String apiKey) {
         this.webClient = builder
-                .baseUrl("https://api.openai.com/v1/completions")
+                .baseUrl("https://api.openai.com/v1")
                 .defaultHeader("Authorization",
                         String.format("Bearer %s", apiKey))
                 .defaultHeader("Content-Type", "application/json")
@@ -22,7 +24,9 @@ public class StudyNotesServiceChatGPT implements StudyNotesService {
     public Mono<String> createStudyNotes(String topic) {
         ChatGPTRequest request = createStudyRequest(topic);
 
-        return webClient.post().bodyValue(request)
+        return webClient.post()
+                .uri("/completions")
+                .bodyValue(request)
                 .retrieve()
                 .bodyToMono(ChatGPTResponse.class)
                 .map(response -> response.choices().get(0).text());

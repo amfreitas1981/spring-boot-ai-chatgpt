@@ -1,6 +1,6 @@
 package br.com.alexandre.springbootchatgpt.controller;
 
-import br.com.alexandre.springbootchatgpt.model.StudyNotesService;
+import br.com.alexandre.springbootchatgpt.service.StudyNotesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

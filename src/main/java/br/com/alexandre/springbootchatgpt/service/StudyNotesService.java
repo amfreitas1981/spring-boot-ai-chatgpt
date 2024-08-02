@@ -1,4 +1,4 @@
-package br.com.alexandre.springbootchatgpt.model;
+package br.com.alexandre.springbootchatgpt.service;
 
 import reactor.core.publisher.Mono;
 

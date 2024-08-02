@@ -11,7 +11,7 @@
 
 
 <p align="center">
- <img src="https://img.shields.io/static/v1?label=Youtube&message=@alexandrefreitas&color=8257E5&labelColor=000000" alt="@alexandrefreitas" />
+
  <img src="https://img.shields.io/static/v1?label=Tipo&message=Tutorial&color=8257E5&labelColor=000000" alt="Tutorial" />
 </p>
 
@@ -27,7 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Esse projeto foi elaborado [nesse vídeo](https://youtu.be/fC_OdD6zy-Y) que demonstra como construir uma API de geração de notas de estudo utilizando Spring Boot e ChatGPT.
+Esse projeto foi elaborado para demonstrar como construir uma API de geração de notas de estudo utilizando Spring Boot e ChatGPT.
 
 ## 🗒️ Roteiro
 
